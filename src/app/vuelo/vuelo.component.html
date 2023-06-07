@@ -1,0 +1,29 @@
+<h2>Vuelos</h2>
+
+<button class="btn btn-primary" (click)="listarVuelos()">Vuelos de hoy</button>
+<button class="btn btn-primary" (click)="listarProximosVuelos()">Próximos vuelos</button>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Número de vuelo</th>
+      <th>Origen</th>
+      <th>Destino</th>
+      <th>Fecha de salida</th>
+      <th>Hora de salida</th>
+      <th>Fecha de llegada</th>
+      <th>Hora de llegada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vuelo of vuelos">
+      <td>{{ vuelo.numeroVuelo }}</td>
+      <td>{{ vuelo.origen }}</td>
+      <td>{{ vuelo.destino }}</td>
+      <td>{{ vuelo.fechaSalida }}</td>
+      <td>{{ vuelo.horaSalida }}</td>
+      <td>{{ vuelo.fechaLlegada }}</td>
+      <td>{{ vuelo.horaLlegada }}</td>
+    </tr>
+  </tbody>
+</table>

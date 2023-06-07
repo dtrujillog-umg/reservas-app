@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="form-group">
+    <label for="numeroVuelo">Número de Vuelo:</label>
+    <input [(ngModel)]="vuelo.numeroVuelo" type="text" class="form-control" id="numeroVuelo">
+  </div>
+
+  <div class="form-group">
+    <label for="origen">Origen:</label>
+    <input [(ngModel)]="vuelo.origen" type="text" class="form-control" id="origen">
+  </div>
+
+  <div class="form-group">
+    <label for="destino">Destino:</label>
+    <input [(ngModel)]="vuelo.destino" type="text" class="form-control" id="destino">
+  </div>
+
+  <div class="form-group">
+    <label for="fechaSalida">Fecha de Salida:</label>
+    <input [(ngModel)]="vuelo.fechaSalida" type="date" class="form-control" id="fechaSalida">
+  </div>
+
+  <div class="form-group">
+    <label for="horaSalida">Hora de Salida:</label>
+    <input [(ngModel)]="vuelo.horaSalida" type="time" class="form-control" id="horaSalida">
+  </div>
+
+  <div class="form-group">
+    <label for="fechaLlegada">Fecha de Llegada:</label>
+    <input [(ngModel)]="vuelo.fechaLlegada" type="date" class="form-control" id="fechaLlegada">
+  </div>
+
+  <div class="form-group">
+    <label for="horaLlegada">Hora de Llegada:</label>
+    <input [(ngModel)]="vuelo.horaLlegada" type="time" class="form-control" id="horaLlegada">
+  </div>
+
+  <button (click)="crearVuelo()" class="btn btn-primary">Crear Vuelo</button>
+</div>

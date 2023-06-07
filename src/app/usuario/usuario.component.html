@@ -1,0 +1,21 @@
+<h1>Crear Usuario</h1>
+
+<form (ngSubmit)="crearUsuario()">
+  <div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="usuario.nombre" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="usuario.email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Contraseña:</label>
+    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="usuario.password" required>
+  </div>
+  <div class="form-group">
+    <label for="tipoUsuario">Tipo de Usuario:</label>
+    <input type="text" class="form-control" id="tipoUsuario" name="tipoUsuario" [(ngModel)]="usuario.tipoUsuario">
+  </div>
+  <button type="submit" class="btn btn-primary">Crear Usuario</button>
+</form>

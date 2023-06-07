@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,7 @@ export class LoginComponent {
   password: string = '';
   email: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private authService: AuthService) {}
 
   onSubmit() {
     const credentials = {
@@ -20,19 +22,27 @@ export class LoginComponent {
     };
 
     this.http.post<any>('http://localhost:8080/usuario/login', credentials).subscribe(
-      response => {
-        // Mostrar la respuesta en la consola
-        console.log(response);
+  response => {
+    console.log('Autenticación exitosa');
+    console.log(response);
 
-        // Autenticación exitosa: redireccionar a la página de inicio o a la ruta deseada
-        console.log('Autenticación exitosa');
-        // Aquí puedes agregar el código para redireccionar a otra página o ruta dentro de tu aplicación
-      },
-      error => {
-        // Autenticación fallida: mostrar un mensaje de error o realizar alguna acción adicional
-        console.log('Autenticación fallida');
-        // Aquí puedes agregar el código para mostrar un mensaje de error en el formulario o realizar alguna acción adicional
-      }
-    );
+    if (response.tipoUsuario === '1') {
+      this.authService.setLoggedIn(true);
+      this.authService.setUserType('1');
+      // Redirigir a la página de empleados
+      // ...
+    } else if (response.tipoUsuario === '2') {
+      this.authService.setLoggedIn(true);
+      this.authService.setUserType('2');
+      // Redirigir a la página de clientes
+      // ...
+    } else {
+      console.log('Tipo de usuario desconocido');
+      // Mostrar mensaje de error o redirigir a una página de error
+      // ...
+    }
+  },
+  // ...
+);
   }
 }
