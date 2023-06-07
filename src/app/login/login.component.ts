@@ -18,9 +18,12 @@ export class LoginComponent {
       email: this.email,
       password: this.password
     };
-  
+
     this.http.post<any>('http://localhost:8080/usuario/login', credentials).subscribe(
       response => {
+        // Mostrar la respuesta en la consola
+        console.log(response);
+
         // Autenticación exitosa: redireccionar a la página de inicio o a la ruta deseada
         console.log('Autenticación exitosa');
         // Aquí puedes agregar el código para redireccionar a otra página o ruta dentro de tu aplicación
@@ -32,5 +35,4 @@ export class LoginComponent {
       }
     );
   }
-  
 }
