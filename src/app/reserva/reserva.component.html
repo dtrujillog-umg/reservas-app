@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Crear Reserva</h2>
+  <form  (ngSubmit)="handleSubmit()">
+    <div class="form-group">
+      <label for="idUsuario">ID Usuario:</label>
+      <input type="number" id="idUsuario" class="form-control" formControlName="idUsuario" required>
+    </div>
+    <div class="form-group">
+      <label for="idVuelo">ID Vuelo:</label>
+      <select id="idVuelo" class="form-control" formControlName="idVuelo" required>
+        <option *ngFor="let vuelo of vuelos" [value]="vuelo.id">{{ vuelo.numero_vuelo }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fechaReserva">Fecha Reserva:</label>
+      <input type="text" id="fechaReserva" class="form-control" formControlName="fechaReserva" required>
+    </div>
+    <div class="form-group">
+      <label for="horaReserva">Hora Reserva:</label>
+      <input type="text" id="horaReserva" class="form-control" formControlName="horaReserva" required>
+    </div>
+    <button type="submit">Crear Reserva</button>
+  </form>
+</div>

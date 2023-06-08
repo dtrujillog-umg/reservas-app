@@ -11,6 +11,8 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { VerusuarioComponent } from './verusuario/verusuario.component';
 import { CrearVueloComponent } from './crear-vuelo/crear-vuelo.component';
 import { VuelosComponent } from './vuelo/vuelo.component';
+import { Reserva, ReservaFormComponent } from './reserva-form/reserva-form.component';
+import { PiedepaginaComponent } from './piedepagina/piedepagina.component';
 
 
 
@@ -25,7 +27,9 @@ const routes: Routes = [
   { path: 'usuario', component: UsuarioComponent},
   { path: 'verusuario', component: VerusuarioComponent},
   { path: 'crearvuelo', component: CrearVueloComponent},
-  { path: 'vervuelos', component: VuelosComponent}
+  { path: 'vervuelos', component: VuelosComponent},
+  { path: 'Reserva', component: ReservaFormComponent},
+  { path: 'Pie', component: PiedepaginaComponent}
 ];
 
 @NgModule({

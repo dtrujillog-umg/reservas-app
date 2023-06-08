@@ -23,7 +23,7 @@ export class UsuarioComponent {
       })
     };
 
-    this.http.post('http://localhost:8080/usuario/crear', this.usuario, httpOptions)
+    this.http.post('http://154.38.164.207:8080/usuario/crear', this.usuario, httpOptions)
       .subscribe(
         () => {
           alert('Usuario creado');

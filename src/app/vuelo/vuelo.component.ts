@@ -12,7 +12,7 @@ interface Vuelo {
 }
 
 @Component({
-  selector: 'http://localhost:8080/vuelo/lista',
+  selector: 'http://154.38.164.207:8080/vuelo/lista',
   templateUrl: './vuelo.component.html',
   styleUrls: ['./vuelo.component.css']
 })
@@ -28,7 +28,7 @@ export class VuelosComponent implements OnInit {
   }
 
   listarVuelos() {
-    this.http.get<Vuelo[]>('http://localhost:8080/vuelo/lista')
+    this.http.get<Vuelo[]>('http://154.38.164.207:8080/vuelo/lista')
       .subscribe(
         (response) => {
           this.vuelos = response;
@@ -45,7 +45,7 @@ export class VuelosComponent implements OnInit {
     tomorrow.setDate(tomorrow.getDate() + 1);
     const fechaMañana = this.getFormattedDate(tomorrow);
 
-    this.http.get<Vuelo[]>('http://localhost:8080/vuelo/lista?fecha=' + fechaMañana)
+    this.http.get<Vuelo[]>('http://154.38.164.207:8080/vuelo/lista?fecha=' + fechaMañana)
       .subscribe(
         (response) => {
           this.vuelos = response;

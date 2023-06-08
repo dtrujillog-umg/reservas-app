@@ -16,7 +16,7 @@ export class VerusuarioComponent implements OnInit {
   }
 
   obtenerUsuarios() {
-    this.http.get<any[]>('http://localhost:8080/usuario/lista').subscribe(
+    this.http.get<any[]>('http://154.38.164.207:8080/usuario/lista').subscribe(
       (response) => {
         this.usuarios = response;
       },

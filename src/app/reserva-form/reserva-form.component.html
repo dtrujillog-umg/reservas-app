@@ -1,0 +1,19 @@
+<form>
+  <div class="mb-3">
+    <label for="usuario" class="form-label">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" [(ngModel)]="reserva.usuario" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="vuelo" class="form-label">Vuelo:</label>
+    <input type="text" id="vuelo" name="vuelo" [(ngModel)]="reserva.vuelo" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="fechaReserva" class="form-label">Fecha de reserva:</label>
+    <input type="date" id="fechaReserva" name="fechaReserva" [(ngModel)]="reserva.fechaReserva" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="horaReserva" class="form-label">Hora de reserva:</label>
+    <input type="time" id="horaReserva" name="horaReserva" [(ngModel)]="reserva.horaReserva" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="guardarReserva()">Guardar</button>
+</form>

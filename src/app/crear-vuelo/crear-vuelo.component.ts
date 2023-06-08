@@ -40,7 +40,7 @@ export class CrearVueloComponent {
     // Mostrar en la consola el objeto vuelo en formato JSON
     console.log(JSON.stringify(this.vuelo));
 
-    this.http.post('http://localhost:8080/vuelo/crear', this.vuelo, { headers })
+    this.http.post('http://154.38.164.207:8080/vuelo/crear', this.vuelo, { headers })
       .subscribe(
         () => {
           alert('Vuelo creado');

@@ -19,6 +19,9 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { VerusuarioComponent } from './verusuario/verusuario.component';
 import { CrearVueloComponent } from './crear-vuelo/crear-vuelo.component';
 import { VuelosComponent } from './vuelo/vuelo.component';
+import { ReservaComponent } from './reserva/reserva.component';
+import { ReservaFormComponent } from './reserva-form/reserva-form.component';
+import { PiedepaginaComponent } from './piedepagina/piedepagina.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { VuelosComponent } from './vuelo/vuelo.component';
     UsuarioComponent,
     VerusuarioComponent,
     CrearVueloComponent,
-    VuelosComponent
+    VuelosComponent,
+    ReservaComponent,
+    ReservaFormComponent,
+    PiedepaginaComponent
   ],
   imports: [
     BrowserModule,
